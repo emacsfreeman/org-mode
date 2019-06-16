@@ -1,0 +1,208 @@
+Bonjour à toi chère visiteuse, cher visiteur
+
+
+
+Tu t'es certainement déjà posé au moins l'une des questions suivantes :
+
+
+
+Pourquoi existe-t-il autant de langages de programmation différents ?
+Par quel langage de programmation commencer ?
+Quelles sont les différences entre ces langages de programmation ?
+Lequel ou lesquels apprendre en 2019 ?
+
+
+Dans cet article je vais tenter de t'aider à y voir plus clair.
+
+
+
+Tout d'abord, je vais faire un parallèle avec les langues humaines.
+
+
+
+Ben oui, même si ça n'a pas l'air d'y ressembler de prime abord il faut tout même comprendre que si l'on parle de langage de programmation c'est précisément parce qu'il existe des similitudes avec les langues humaines mais pas seulement. 
+
+
+
+Sans rentrer dans les détails de la linguistique il est tout de même nécessaire de rappeler que ce sont, en partie, les travaux du linguistique américain Noam Chomsky qui ont permis l'avènement et l'amélioration des langages de programmation tels qu'on les connaît aujourd'hui.
+
+
+
+Initialement il s'agissait uniquement de code binaire ce qui n'est pas très compréhensible pour le commun des mortels.
+
+
+
+Parmi les langues humaines, depuis bien longtemps (on en parle déjà dans la bible avec la tour de Babel), les hommes ont toujours essayé de réduire le nombre des langues à une langue universelle et en même temps (d'autres personnes) ils ont toujours cherché à en inventer de nouvelles.
+
+
+
+D'ailleurs certains sont même allés jusqu'à construire des langues (presque) à partir de rien comme l'espéranto. 
+
+
+
+On appelle ces langues des langues construites et ce sont elles qui pourraient le plus s'apparenter aux langages informatiques.
+
+
+
+Minute papillon ! En fait, bien avant cela avec le développement des mathématiques, mais aussi de la musique, on a créé ce qu'on appelle des langages formels.
+
+
+
+Les langages de programmation sont pour ainsi dire plus proches de ces langages-là.
+
+
+
+
+
+Pourquoi existe-t-il autant de langages de programmation différents ?
+
+
+
+Pour les mêmes raisons qu'il existe des langages formels différents et des langues humaines différentes.
+
+
+
+Je m'explique.
+
+
+
+L'objectif d'un langage est de permettre à ceux qui l'utilisent de communiquer entre eux.
+
+
+
+Prenons un exemple historique "simple".
+
+
+
+Le français que j'utilise pour écrire cet article et que tu utilises pour le lire est un langage commun qui nous permet de communiquer.
+
+Néanmoins, si je vais en Angleterre ou en Australie... il me sera plus utile d'en utiliser un autre comme l'anglais par exemple.
+
+Pourquoi ? Et bien tout simplement parce ces deux pays sont peuplés de gens différents des habitants de la francophonie au sens où ils s'expriment avec une langue différente.
+
+Néanmoins au sein même de la francophonie, en Afrique par exemple, il y a de nombreuses régions où les gens préfèrent utiliser leur dialecte local pour communiquer entre eux.
+
+D'ailleurs, si on reste en France et qu'on regarde l'histoire avant la révolution française, les langues régionales étaient majoritairement utilisées.
+
+
+
+Pour résumer, il existe d'abord et avant tout, des langages de programmation différents... parce qu'ils ont été codé et sont utilisés par des gens différents. C'est exactement pareil que pour les langues humaines.
+
+
+
+
+
+Par quel langage de programmation commencer ?
+
+
+
+Maintenant que la question de la diversité a été clarifié à partir d'une situation dont tu fais l'expérience tous les jours rentrons vraiment dans la vision informatique des choses.
+
+
+
+Ce que j'ai laissé suggérer, sans vraiment le préciser, dans la partie précédente c'est qu'il existe différents usages et c'est donc pour cette raison aussi qu'il y a différents langages de programmation.
+
+
+
+Alors comment déterminer par lequel commencer.
+
+
+
+À moins que ton école, ton centre de formation ou ton employeur ne t'impose un langage particulier alors je te dirais de commencer par Python.
+
+
+
+Voici quelques raisons qui justifient ce choix (liste non exhaustive) :
+
+Python est un langage dit de haut niveau ce qui veut dire que pourvu que tu saches lire l'anglais (ou utiliser un traducteur en ligne) il y a fort à parier que tu seras capable de lire du code python sans problème
+Python a une documentation très bien fournie et traduite intégralement en français (néanmoins il est OBLIGATOIRE d'apprendre à lire et écrire en anglais)
+Python a été choisi par l'éducation nationale (en France)
+Python est très populaire en général 
+Python est très utilisé pour les Data Science (Intelligence Artificielle donc beaucoup d'offres d'emploi)
+Python est (relativement) facile à apprendre (au début)
+Python est un langage polyvalent
+
+
+Dans la partie suivante je reviendrais sur certains des éléments de cette liste.
+
+
+
+Sache que tu peux également choisir JavaScript, Ruby ou Swift pour des raisons similaires (sauf l'éducation nationale et les data science).
+
+
+
+De façon plus générale, le choix du 1er langage de programmation n'a pas vraiment d'importance parce qu'un bon programmeur doit connaître et être capable d'apprendre plusieurs langages de programmation.
+
+
+
+Et ceci est de plus en plus vrai de la même manière qu'il devient de plus en plus important d'être capable de communiquer dans plusieurs langues (au moins l'anglais en plus du français par exemple).
+
+
+
+Quelles sont les différences entre ces langages de programmation ?
+
+
+
+
+
+Il y aurait beaucoup à dire sur les différences entre langages de programmation alors je vais essayer d'être synthétique en parlant des paradigmes (ou styles) de programmation.
+
+
+
+Tout d'abord nous avons le paradigme impératif ou procédurale. C'est le paradigme historique qui consiste à exécuter les instructions les unes à la suite des autres en utilisant des variables et des types de variables prédéfinis. L'exemple type de ce genre de programmation est le langage C qui est très apprécié des programmeurs système. Le système d'exploitation Unix (sur lequel repose GNU/Linux, macOS... et par dérivations successives Windaube, oui je trolle un peu xO). Golang, JavaScript, Python, Rust ou encore Swift ont tous été inspiré du C et permettent donc la programmation impérative, le truc c'est que C est le plus efficace dans ce domaine (bon les puristes iront peut-être chercher la petite bête avec Golang ou Rust.. have fun guys :) ). 
+Ensuite nous avons le paradigme orienté objet. Au lieu de raisonner en variables on va raisonner en objets en classes. Concrètement je peux définir une classe Crypto dont une instance (un exemplaire) qu'on appellera objet serait Bitcoin. Ainsi Bitcoin est un objet de la classe Crypto. La classe est pour ainsi dire le moule (ou le patron du vêtement, ou le plan de la maison) et l'objet ou instance de classe est ce que l'on obtient en sortie (le vêtement, la maison). La classe représente le modèle et l'objet sa matérialisation. Tout de suite tu vois qu'on est monté en abstraction et que l'on peut aisni faire des analogies avec précisément des du monde réel. Les langages Java, JavaScript, Python, R, Ruby ou Swift sont de bons exemples de langages orientés objets on parle alors de POO (Programmation Orientée Objet).
+Pour conclure je parlerai du paradigme fonctionnel. C'est probablement le paradigme qui peut paraître le plus abstrait mais qui, à mon avis, est le plus puissant. En fait tout part de l'idée mathématique de fonction. Ne pars pas ! Je vais pas te faire un cours de maths je te rassure. On va prendre une fonction toute simple qui donne le périmètre d'un carré. En entrée on donne la longueur du côté et en sortie on récupère le périmètre donc le quadruple (Périmètre = 4 fois côté). Le paradigme fonctionnel consiste à tout voir comme des fonctions. Mais regarde on peut faire ça avec des choses qui te sont plus familières (et utiles). Lorsque tu vas sur un moteur de recherche tu tapes une requête (l'entrée de la fonction), et tu obtiens un résultat (la liste des sites correspondants à ta recherche). Le moteur de recherche est une super fonction. Parmi les langages de programmation utilisant le paradigme fonctionnel citons par exemple Clojure, Elixir, Haskell, JavaScript, Lisp, Python ou encore Swift. 
+
+
+Je n'en ai pas parlé ici mais on aurait pu faire une dichotomie entre les langages compilés et les langages interprétés.
+
+
+
+Je vais donner juste deux exemples rapidement.
+
+
+
+C est un langage compilé ce qui veut dire qu'une fois que le programmeur a écrit son code il va utiliser un programme externe appelé compilateur qui va tout traduire en langage machine. Cette opération supplémentaire qui ne peut intervenir qu'une fois qu'on est prêt à exécuter le code a des avantages et inconvénient. 
+
+Inconvénients : on ne peut voir les erreurs qu'à la compilation. Or la compilation peut prendre du temps. Le code exécutable ne l'est que sur la machine où il a été compilé... Par contre le code source est transportable.
+Avantages : une fois compilé le code est plus sûr. L'exécutable est extrêment performant car taillé sur mesure pour la machine sur laquelle il a été compilé.
+
+
+Python est un langage interprété ce qui veut dire qu'il est traduit à la volé et donc peut être exécuté sans avoir à passer par un compilateur.
+
+Inconvénients : le code interprété a des performances moindres que celles d'un code compilé.
+Avantages : pas de temps de compilations et le code peut être exécuté sur toutes les machines.
+
+
+Pour faire une analogie simple, une compilation c'est comme une traduction ça prend du temps une interprétation ça doit être quasi-instantanné.
+
+
+
+Lequel ou lesquels apprendre en 2019 ?
+
+
+
+Bon, c'est bien beau tout ça mais comment choisir maintenant ?
+
+
+
+Je vais te proposer différents choix selon différents cas de figure parce qu'au final c'est forcément du cas par cas.
+
+Si tu aimes les calculs, que tu veux faire de l'analyse de données, de l'intelligence artificielle (notamment de la traduction automatique de type Google Translate) alors go Python
+Si tu veux faire du web là il y a plusieurs choix mais dans tous les cas tu devras avoir un minimum de bases en JavaScript par contre pour trouver un emploi en France il est recommandé de maîtriser également PHP. Pour l'international nodeJS ou Ruby on Rails voir Python Django peuvent être des bonnes options.
+Si tu veux faire du développement mobile alors Swift (pour Apple), Kotlin (pour Android) et ReactJS pour les deux
+Si tu t'intéresses aux technologies blockchain JavaScript et Python sont de très bonnes bases et Solidity est spécifique pour Ethereum mais dans tous les cas je te recommande de suivre mes formations sur ces sujets.
+
+
+Voilà, j'espère que ce tour d'horizon t'aura permis d'y voir plus clair en ce qui concerne les langages de programmations en 2019
+
+
+
+Il faut savoir que tous les jours il y a des nouveaux langages de programmation qui sont créés alors que de langues humaines meurent pendant le même temps... snif :(
+
+
+
+Du coup tu feras peut-être partie de ceux qui développeront l'intelligence artificielle qui codera les prochaines langues humaines sur une blockchain... qui sait ?
+
+
+

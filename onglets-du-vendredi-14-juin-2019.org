@@ -1,0 +1,129 @@
+#+TITLE: Onglets du vendredi 14 juin 2019
+#+AUTHOR: Laurent Garnier
+
+* Blisk
+
+  + [[https://coinmarketcap.com/]]
+
+* Brave
+
+  1. [[https://egghead.io/podcasts/learning-to-code-from-scratch-on-the-modern-web-with-tae-lur-alexis][egghead.io]]
+  2. [[https://blog.getpostman.com/2018/03/19/how-to-make-money-using-postman-chaining-requests/?mkt_tok=eyJpIjoiTTJVME16SmtOakZrWWpoaSIsInQiOiJNdWVSN2MwTm9SeFdjdnFSRkhmMWtlOGFzSVRTcytwamRUaGI0VG4zQlVscFhYeEJzR01vKzJOMzhHNFRzVXRtY0hhSEhmUVBqc0dHZzAxcEl0dDI4VjhUVTZ5dHR0Z0lEcVI2UFBBaHFpTmFCUE9XbGQxcVJkbkl5QktYMGd0NyJ9][Postman Blog How to make money using Postman]]
+  3. [[chrome://rewards/]]
+  4. [[https://guide.boum.org/]]
+  5. [[chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://guide.boum.org/tomes/1_hors_connexions/pdf/guide-tome1-a4-20170910.pdf][autodéfense numérique]]
+  6. [[https://unsplash.com/]]
+  7. [[https://emacsformacosx.com/tips]]
+  8. [[https://vigou3.gitlab.io/emacs-modified-macos/]]
+  9. [[https://github.com/monfresh/laptop]]
+ 10. [[chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://zonebitcoin.co/wp-content/uploads/2019/04/Gagner-de-largent-gr%25C3%25A2ce-au-bitcoin.pdf][15 méthodes pour gagner de l'argent réel avec les cryptos]]
+ 11. [[http://moondash.co.in/faucet]]
+ 12. [[http://moonliteco.in/?ref=674908b50440]]
+ 13. [[https://zonebitcoin.co/gagner-des-bitcoins-gratuitement-avec-les-faucets/][zonebitcoin]]
+ 14. [[https://freenem.com/free-rolls]]
+ 15. [[https://tokenfly.pw/pLVAkUKX]]
+ 16. [[https://freecardano.com/]]
+ 17. [[https://coinfaucet.io/]]
+ 18. [[https://freebitcoin.io/]]
+ 19. [[http://moondoge.co.in/?ref=47caa64034d7]]
+ 20. [[http://moonbitcoin.cash/faucet]]
+ 21. [[http://moonbit.co.in/?ref=a49a532bd890]]
+ 22. [[https://pypi.org/project/bitcoin/]]
+ 23. [[https://github.com/volym3ad/BOOKS]]
+ 24. [[https://learnxinyminutes.com/docs/ruby/]]
+ 25. [[https://learnxinyminutes.com/docs/python/]]
+ 26. [[https://www.multichain.com/getting-started/]]
+ 27. [[https://realpython.com/primer-on-python-decorators/]]
+
+
+* Chrome
+** Ivan Academy
+  1. [[https://ivanontech.teachable.com/]]
+  2. [[https://careerfoundry.com/en/blog/web-development/whats-the-difference-between-frontend-and-backend/][careerfoundry]]
+  3. [[https://mechanicalforex.com/2010/10/optimizing-without-curve-fitting-six-tips-to-avoid-over-optimization.html][mechanicalforex]]
+** Ruby
+  1. [[https://dashboard.heroku.com]]
+  2. [[https://medium.com/capital-one-tech/ruby-rvm-and-bundler-demystified-9f3f946230f1][Ruby, RVM, and Bundler Demystified]]
+  3. [[https://www.engineyard.com/blog/how-to-install-ruby-on-a-mac-with-chruby-rbenv-or-rvm][How to Install Ruby on a Mac with Chruby, Rbenv, or RVM]]
+** Web
+  1. [[https://www.w3schools.com/tags/tag_article.asp][w3schools]]
+** Swift
+  1. [[https://developer.apple.com/xcode/swiftui/]]
+  2. [[https://developer.apple.com/swift/]]
+** Crypto Trading Bot
+  1. [[https://www.education-ecosystem.com/elliottminns/l5DN4-how-to-create-a-cryptocurrency-trading-bot-in-nodejs/XGxm4-how-to-create-a-cryptocurrency-trading-bot-in-no-6/][How to Create a Cryptocurrency Trading Bot in Node]]
+  2. [[https://medium.com/@BlockchainEng/how-to-build-an-automated-cryptocurrency-trading-bot-on-binance-with-python-2cd9b5874e44][Build Crypto Bitcoin Trading Bot with Python]]
+** Books
+  1. [[https://github.com/volym3ad/BOOKS]]
+** Crypto Tracker
+  1. [[https://hackernoon.com/build-a-cryptocurrency-price-tracker-in-5-minutes-d66c3d37ad71][Build a Crypto Price Tracker in 5 Minutes]]
+  2. [[https://www.pubnub.com/products/realtime-messaging/?utm_source=Syndication&utm_medium=Medium&utm_campaign=SYN-CY18-Q1-Medium-Hackernoon-Sponsorship-January-19&utm_content=geolocation][PubNub]]
+  3. [[https://pusher.com/tutorials/bitcoin-live-graph-python]]
+  4. [[https://realpython.com/python-bitcoin-ifttt/]]
+  5. [[https://ifttt.com/discover]]
+  6. [[https://coinmarketcap.com/api/]]
+** Webhooks
+  1. [[http://timothyfitz.com/2009/02/09/what-webhooks-are-and-why-you-should-care/][What webhooks are and why you should care]]
+** Python
+  1. [[https://realpython.com/python-virtual-environments-a-primer/]]
+** Emacs
+*** Config
+ 1. [[https://sachachua.com/blog/2019/06/2019-06-10-emacs-news/]]
+ 2. [[https://ladicle.com/post/config/]]
+ 3. [[http://aaronbedra.com/emacs.d/]]
+ 4. [[https://lupan.pl/dotemacs/]]
+ 5. [[https://www.sandeepnambiar.com/my-minimal-emacs-setup/]]
+ 6. [[https://johnsogg.github.io/emacs-golang]]
+
+*** Learn
+    1. [[https://www.quora.com/What-is-the-best-way-to-learn-emacs]]
+    2. [[https://www.emacswiki.org/emacs/EmacsNewbie]]
+    3. [[https://emacsredux.com/blog/2019/01/10/the-emacs-year-in-review/]]
+    4. [[https://dev.to/deciduously/how-i-emacs-and-so-can-you-packages-m9p]]
+    5. [[https://dev.to/deciduously/how-i-emacs-and-so-can-you-4434]]
+    6. [[https://thoughtbot.com/blog/the-many-uses-of-org-mode]]
+    7. [[http://www.grokcode.com/207/51-insanely-useful-emacs-shortcuts/][GrokCode]]
+    8. [[http://www.wilfred.me.uk/blog/2018/01/06/the-emacs-guru-guide-to-key-bindings/][Guru Guide]]
+    9. [[https://sachachua.com/blog/2013/05/how-to-learn-emacs-a-hand-drawn-one-pager-for-beginners/][Sacha Chua]]
+*** Blogging
+ 1. [[https://irreal.org/blog/?p=7731]]
+ 2. [[http://ergoemacs.org/emacs/blog.html]]
+ 3. [[https://arenzana.org/2019/04/blogging-with-org-mode/]]
+ 4. [[https://arenzana.org/2019/04/emacs-org-mode/]]
+ 5. [[https://github.com/org2blog/org2blog]]
+ 6. [[https://irreal.org/blog/?p=7132]]
+ 7. [[https://ambrevar.xyz/blog-architecture/]]
+ 8. [[http://www.johnborwick.com/2019/02/13/org-mode-website.html]]
+ 9. [[https://emacs.stackexchange.com/questions/31482/org-mode-blog-post-with-jekyll][emacs.stackexchange]]
+*** Crypto
+    1. [[https://github.com/eklitzke/coin-ticker-mode]]
+    
+
+* Firefox
+
+  1. [[https://doc.lagout.org/programmation/Ruby/Ruby%2520Cookbook_%2520Recipes%2520for%2520Object-Oriented%2520Scripting%2520%25282nd%2520ed.%2529%2520%255BCarlson%2520%2526%2520Richardson%25202015-03-25%255D.pdf][Ruby Cookbook]]
+  2. [[https://github.com/volym3ad/BOOKS/blob/master/Build_Awesome_Command-Line_Applications_in_Ruby_2.pdf][volym3adBOOKS]]
+  3. [[https://learnrubythehardway.org/book/]]
+** Blockchain
+*** Ruby
+  1. [[https://yukimotopress.github.io/blockchains]]
+  2. [[https://github.com/Haseeb-Qureshi/lets-build-a-blockchain]]
+  3. [[https://www.alibabacloud.com/blog/building-the-simplest-blockchain-with-ruby_593806][Building the Simplest Blockchain with Ruby]]
+  4. [[https://medium.com/@bradford_hamilton/write-your-own-blockchain-and-pow-algorithm-using-crystal-d53d5d9d0c52][Write your own blockchain and PoW using Crystal]]
+  5. [[https://medium.com/usehedge/ruby-on-rails-for-the-blockchain-f4019bbe783f][Rails for the Blockchain]]
+  6. [[http://www.rubyflow.com/p/ccz1ss-build-your-own-blockchain-in-20-lines-of-ruby-blockchainrb-awesome-blockchains][Build Your Own Blockchain in 20 Lines of Ruby]]
+  7. [[https://www.nopio.com/blog/blockchain-app-ruby/][Blockchain App with Ruby]]
+  8. [[https://dzone.com/articles/building-the-simplest-blockchain-with-ruby][How to Build the Simplest Blockchain with Ruby]]
+** Ruby 
+   1. [[https://en.wikipedia.org/wiki/Zork]]
+   2. [[https://en.wikibooks.org/wiki/Mathematics_with_Python_and_Ruby/Whole_numbers_in_Ruby][Math with Ruby]]
+   3. 
+* Safari
+
+  1. [[https://help.podia.com/articles/2459520-how-to-add-upsells-to-your-courses-and-digital-downloads][Upsells]]
+  2. [[https://www.podia.com/articles/online-course-marketing-strategies]]
+  3. [[https://www.podia.com/articles/getting-your-first-sale-tips-for-a-successful-profitable-course-launch][First sale]]
+  4. [[https://www.podia.com/articles/sales-page-testimonials]]
+  5. [[https://github.com/fniessen/refcard-org-beamer]]
+  6. [[https://timmurphy.org/2012/01/21/small-caps-in-latex/]]
+  7. 
