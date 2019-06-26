@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="FR">
+<head>
+<title>Analyse des données de crypto-monnaie, partie I : Obtention et lecture de données d’actifs numériques</title>
+<!-- 2019-06-26 Wed 08:16 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Org-mode">
+<meta name="author" content="Laurent Garnier">
+
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style type="text/css">
+/* org mode styles on top of twbs */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-size: 18px;
+    margin-bottom: 105px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 101px;
+    background-color: #f5f5f5;
+}
+
+footer > div {
+    padding: 10px;
+}
+
+footer p {
+    margin: 0 0 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#table-of-contents {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+blockquote p {
+    font-size: 18px;
+}
+
+pre {
+    font-size: 16px;
+}
+
+.footpara {
+    display: inline-block;
+}
+
+figcaption {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+  padding-bottom: 15px;
+}
+
+/* from twbs docs */
+
+.bs-docs-sidebar.affix {
+    position: static;
+}
+@media (min-width: 768px) {
+    .bs-docs-sidebar {
+        padding-left: 20px;
+    }
+}
+
+/* All levels of nav */
+.bs-docs-sidebar .nav > li > a {
+    display: block;
+    padding: 4px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #999;
+}
+.bs-docs-sidebar .nav > li > a:hover,
+.bs-docs-sidebar .nav > li > a:focus {
+    padding-left: 19px;
+    color: #A1283B;
+    text-decoration: none;
+    background-color: transparent;
+    border-left: 1px solid #A1283B;
+}
+.bs-docs-sidebar .nav > .active > a,
+.bs-docs-sidebar .nav > .active:hover > a,
+.bs-docs-sidebar .nav > .active:focus > a {
+    padding-left: 18px;
+    font-weight: bold;
+    color: #A1283B;
+    background-color: transparent;
+    border-left: 2px solid #A1283B;
+}
+
+/* Nav: second level (shown on .active) */
+.bs-docs-sidebar .nav .nav {
+    display: none; /* Hide by default, but at >768px, show it */
+    padding-bottom: 10px;
+}
+.bs-docs-sidebar .nav .nav > li > a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.bs-docs-sidebar .nav .nav > li > a:hover,
+.bs-docs-sidebar .nav .nav > li > a:focus {
+    padding-left: 29px;
+}
+.bs-docs-sidebar .nav .nav > .active > a,
+.bs-docs-sidebar .nav .nav > .active:hover > a,
+.bs-docs-sidebar .nav .nav > .active:focus > a {
+    padding-left: 28px;
+    font-weight: 500;
+}
+
+/* Nav: third level (shown on .active) */
+.bs-docs-sidebar .nav .nav .nav {
+    padding-bottom: 10px;
+}
+.bs-docs-sidebar .nav .nav .nav > li > a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 40px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.bs-docs-sidebar .nav .nav .nav > li > a:hover,
+.bs-docs-sidebar .nav .nav .nav > li > a:focus {
+    padding-left: 39px;
+}
+.bs-docs-sidebar .nav .nav .nav > .active > a,
+.bs-docs-sidebar .nav .nav .nav > .active:hover > a,
+.bs-docs-sidebar .nav .nav .nav > .active:focus > a {
+    padding-left: 38px;
+    font-weight: 500;
+}
+
+/* Show and affix the side nav when space allows it */
+@media (min-width: 992px) {
+    .bs-docs-sidebar .nav > .active > ul {
+        display: block;
+    }
+    /* Widen the fixed sidebar */
+    .bs-docs-sidebar.affix,
+    .bs-docs-sidebar.affix-bottom {
+        width: 213px;
+    }
+    .bs-docs-sidebar.affix {
+        position: fixed; /* Undo the static from mobile first approach */
+        top: 20px;
+    }
+    .bs-docs-sidebar.affix-bottom {
+        position: absolute; /* Undo the static from mobile first approach */
+    }
+    .bs-docs-sidebar.affix .bs-docs-sidenav,.bs-docs-sidebar.affix-bottom .bs-docs-sidenav {
+        margin-top: 0;
+        margin-bottom: 0
+    }
+}
+@media (min-width: 1200px) {
+    /* Widen the fixed sidebar again */
+    .bs-docs-sidebar.affix-bottom,
+    .bs-docs-sidebar.affix {
+        width: 263px;
+    }
+}
+</style>
+<script type="text/javascript">
+$(function() {
+    'use strict';
+
+    $('.bs-docs-sidebar li').first().addClass('active');
+
+    $(document.body).scrollspy({target: '.bs-docs-sidebar'});
+
+    $('.bs-docs-sidebar').affix();
+});
+</script>
+</head>
+<body>
+<div id="content" class="container">
+<div class="row"><div class="col-md-9"><h1 class="title">Analyse des données de crypto-monnaie, partie I : Obtention et lecture de données d’actifs numériques</h1>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Intro</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Le mot «crypto-monnaie» a pris d'assaut le monde financier, et
+pourtant, il manque des recherches formelles et ouvertes sur les
+données des actifs numériques. Personnellement, étant un
+investisseur en crypto-monnaie et scientifique des données, je suis fasciné
+par l'étude de cette classe d'actifs naissante au microscope
+d'outils d'analyse de données et d'apprentissage automatique afin de
+guider mes décisions d'investissement.
+</p>
+
+<p>
+Nous espérons que ces séries de tutoriels permettront de combler
+l'écart entre les scientifiques des données et le monde de la
+crypto-monnaie; inversement, les traders non techniques en
+cryptographie pourront profiter de cette occasion pour acquérir des
+compétences de codage directement applicables. Nos données viendront
+de Poloniex.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Mise en place de l'environnement de recherche</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Nous utiliserons Python 3 et l'environment Anaconda tout au long de la
+série. Avant de commencer à extraire les données des crypto-monnaies,
+suivez les instructions pour <a href="https://www.anaconda.com/distribution/">installer Anaconda</a>, l’outil de gestion
+de paquets. Le lien vous mènera au site Web de Continuum Analytics
+qui installera les deux: l'interpréteur Python et les packages dont
+nous aurons besoin. En particulier, nous allons tirer parti de la
+bibliothèque Pandas et de Jupyter Notebooks, deux des outils les
+plus impressionnants pour jouer avec des données.
+</p>
+
+<p>
+Lorsque vous avez terminé d'installer l'environnement, recherchez
+Anaconda Navigator dans votre système, ouvrez-le.
+</p>
+
+<div class="center">
+
+<figure>
+<p><img src="./anaconda-dashboard.png" class="img-responsive" alt="anaconda-dashboard.png">
+</p>
+</figure>
+</div>
+
+<p>
+Lorsque vous êtes dans le navigateur, cliquez sur le bouton de
+lancement situé sous l’icône Jupyter Notebook.
+</p>
+
+<p>
+Cela ouvrira la fenêtre racine de Jupyter dans votre navigateur par
+défaut. Créez un nouveau bloc-notes Python 3 en cliquant sur
+l’option correspondante dans le menu déroulant Nouveau.
+</p>
+
+<p>
+Cela vous mènera au cahier. Ceci termine la configuration de notre
+environnement de recherche.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Gratter les données</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Importez la bibliothèque pandas, et tapez :
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-python">import pandas as pd
+</pre>
+</div>
+
+<p>
+Pour exécuter une cellule de code, appuyez sur le bouton Lecture
+situé sur le panneau supérieur ou appuyez sur Maj + Entrée.
+</p>
+
+<p>
+Exécutez aussi :
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-python">%matplotlib inline
+</pre>
+</div>
+
+<p>
+Cela fera apparaître des tracés visuels en ligne sans autre appel
+pour afficher le tracé.
+</p>
+
+<p>
+Poloniex utilise JSON ou JavaScript Object Notation pour communiquer
+ses données historiques Open, High, Low, Close, Volume (OHLCV) avec
+le monde extérieur, ce qui est quasiment la norme de transfert de
+données pour la majorité des places de marché de crypto-monnaies :
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js">{"date":1483920000,"high":916.41833046,"low":880,"open":916.41832969,
+"close":902,"volume":1561326.5181909,"quoteVolume":1743.42476903,
+"weightedAverage":895.55141462}
+</pre>
+</div>
+
+<p>
+Le problème avec JSON est qu’il est assez fastidieux de le
+décompresser et de le trier manuellement dans des tableaux. Si vous
+deviez le faire manuellement, vous devriez interroger chaque objet
+comme un dictionnaire Python et trier les valeurs dans des
+tableaux. Heureusement, la bibliothèque pandas a la fonction
+<code>pd.read_json()</code> qui effectuera tout le tri et les conversions
+datetime. Nous sommes prêts à écrire notre fonction d'extraction de
+données, qui prendra un symbole et une fréquence de barres et
+renverra une trame de données pandas contenant la série temporelle
+d'une crypto-monnaie donnée :
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-python">def CryptoData(symbol, frequency):
+    #Params: String symbol, int frequency = 300,900,1800,7200,14400,86400
+    #Returns: df from first available date
+    url ='https://poloniex.com/public?command=returnChartData&amp;currencyPair='+symbol+'&amp;end=9999999999&amp;period='+str(frequency)+'&amp;start=0'
+    df = pd.read_json(url)
+    df.set_index('date',inplace=True)
+    return df
+</pre>
+</div>
+
+<p>
+Maintenant, voyons-le en action! Récupérons tous les jours bitcoin -
+USD close data. Dans la cellule suivante, tapez :
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-python">df = CryptoData('USDT_BTC', 86400)['close']
+</pre>
+</div>
+
+<p>
+Maintenant, lancez-le. Notez que si vous supprimez <code>['close']</code> à la
+fin de l'appel, vous obtiendrez toutes les données de la barre
+OHLCV.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Obtenir le premier regard</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Vous pouvez inspecter la tête du dataframe en tapant et en exécutant
+<code>df.head()</code> :
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-python">date
+2015-02-19    244.00
+2015-02-20    240.25
+2015-02-21    245.00
+2015-02-22    235.00
+2015-02-23    235.00
+Name: close, dtype: float64
+</pre>
+</div>
+
+<p>
+Pour inspecter visuellement la série chronologique d’historique,
+tapez <code>df.plot()</code>. Vous obtiendrez un graphique de l'historique des
+prix en sortie :
+</p>
+
+<div class="center">
+
+<figure>
+<p><img src="./df.plot.png" class="img-responsive" alt="df.plot.png">
+</p>
+</figure>
+</div>
+
+<p>
+C’est bien et joli, mais nous n’obtenons pas beaucoup d’informations
+sur ce complot. Les pandas vous permettent d'effectuer beaucoup
+d'analyses rapides et sales en chaînant des appels de méthode sur
+une trame de données. Par exemple, vous pouvez obtenir des
+statistiques descriptives sur les rendements en pourcentage de la
+série en tapant <code>df.pct_change().describe()</code> :
+</p>
+
+<div class="center">
+
+<figure>
+<p><img src="./df.change.png" class="img-responsive" alt="df.change.png">
+</p>
+</figure>
+</div>
+
+<p>
+Comme prévu, le bitcoin est très volatile, mais pouvons-nous le
+visualiser ? Nous pouvons tracer l'histogramme des pourcentages de
+retour sur une ligne: <code>df.pct_change().hist(bins=100)</code>, ce qui
+donne le graphique suivant :
+</p>
+
+<div class="center">
+
+<figure>
+<p><img src="./hist.png" class="img-responsive" alt="hist.png">
+</p>
+</figure>
+</div>
+
+<p>
+Nous pouvons maintenant visualiser les queues grasses de Bitcoin.
+</p>
+
+<p>
+Espérons que cela vous a donné un avant-goût de la suite de la
+série. N'hésitez pas à expérimenter avec la fonction d'extraction de
+données et la bibliothèque de pandas. Essayez de récupérer des
+données pour d'autres actifs numériques en modifiant la chaîne de
+symboles dans l'appel de fonction ou essayez de tracer différentes
+séries chronologiques d'historique, en appelant simplement <code>.plot()</code>
+sur le cadre de données.
+</p>
+
+<p>
+S'il vous plaît laissez vos commentaires et commentaires ci-dessous.
+</p>
+
+<p>
+Bon code !
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Source</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Ceci est une traduction de l'article de Ed Silantyev disponible sur
+<a href="https://medium.com/@eliquinox/cryptocurrency-data-analysis-part-i-obtaining-and-playing-with-data-of-digital-assets-2a963a72703b">Medium</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Pour aller plus loin</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li><a href="https://amzn.to/2ILGi91">Bien démarrer avec Matplotlib</a>
+</li>
+<li><a href="https://amzn.to/2RzGVoR">Analyse de données en Python</a>
+</li>
+</ul>
+</div>
+</div>
+</div><div class="col-md-3"><nav id="table-of-contents">
+<div id="text-table-of-contents" class="bs-docs-sidebar">
+<ul class="nav">
+<li><a href="#sec-1">1. Intro</a></li>
+<li><a href="#sec-2">2. Mise en place de l'environnement de recherche</a></li>
+<li><a href="#sec-3">3. Gratter les données</a></li>
+<li><a href="#sec-4">4. Obtenir le premier regard</a></li>
+<li><a href="#sec-5">5. Source</a></li>
+<li><a href="#sec-6">6. Pour aller plus loin</a></li>
+</ul>
+</div>
+</nav>
+</div></div></div>
+<footer id="postamble" class="">
+<div><p class="author">Author: Laurent Garnier</p>
+<p class="date">Created: 2019-06-26 Wed 08:16</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.2 (<a href="http://orgmode.org">Org-mode</a> 9.2.3)</p>
+</div>
+</footer>
+</body>
+</html>
