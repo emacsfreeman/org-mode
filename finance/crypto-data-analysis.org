@@ -1,5 +1,6 @@
-#+TITLE: Analyse des données de cryptomonnaie, partie I: Obtention et lecture de données d’actifs numériques
+#+TITLE: Analyse des données de crypto-monnaie, partie I : Obtention et lecture de données d’actifs numériques
 #+AUTHOR: Laurent Garnier
+#+LANGUAGE: FR
 
 * Intro
 
@@ -175,9 +176,12 @@
 
 
 
-  
 * Source
-
+  
   Ceci est une traduction de l'article de Ed Silantyev disponible sur
   [[https://medium.com/@eliquinox/cryptocurrency-data-analysis-part-i-obtaining-and-playing-with-data-of-digital-assets-2a963a72703b][Medium]].
 
+* Pour aller plus loin
+
+  + [[https://amzn.to/2ILGi91][Bien démarrer avec Matplotlib]]
+  + [[https://amzn.to/2RzGVoR][Analyse de données en Python]]
